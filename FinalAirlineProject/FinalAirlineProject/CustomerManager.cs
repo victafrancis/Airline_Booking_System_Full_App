@@ -63,11 +63,11 @@ namespace FinalAirlineProject
 
         public string getCustomerList()
         {
-            string output = "Customer List:\nNumber\tName\t\tPhone\n";
+            string output = "[ID] - [Name] - [Phone]\n";
             for (int i = 0; i < numCustomers; i++)
             {
-                output += listCustomer[i].getCustomerId() + "\t" + listCustomer[i].getFirstName() + " " +
-                    listCustomer[i].getLastName() + "\t" + listCustomer[i].getPhone() + "\n";
+                output += listCustomer[i].getCustomerId() + " - " + listCustomer[i].getFirstName() + " " +
+                    listCustomer[i].getLastName() + " - " + listCustomer[i].getPhone() + "\n";
             }
             return output;
         }
