@@ -60,7 +60,7 @@ namespace FinalAirlineProject
 
         public string getFlightList()
         {
-            string output = "Flight List:\n";
+            string output ="[flight #] from [start point] to [end point]\n";
             for (int i = 0; i < numFlights; i++)
             {
                 output += listFlights[i].getFlightNumber() + " from " + listFlights[i].getOrigin() + " to " +
