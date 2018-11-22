@@ -21,18 +21,29 @@ namespace FinalAirlineProject
         {
             formCustomerMenu f = new formCustomerMenu(this);
             f.Show();
+            this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             formFlightMenu f = new formFlightMenu(this);
             f.Show();
+            this.Hide();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             formBookingMenu f = new formBookingMenu(this);
             f.Show();
+            this.Hide();
+            
+        }
+
+        private void formMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

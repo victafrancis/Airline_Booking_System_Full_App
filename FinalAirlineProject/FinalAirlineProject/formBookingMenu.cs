@@ -24,5 +24,15 @@ namespace FinalAirlineProject
             InitializeComponent();
         }
 
+        private void formBookingMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            Close();
+        }
     }
 }

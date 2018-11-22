@@ -27,6 +27,7 @@ namespace FinalAirlineProject
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            menu.Show();
             Close();
         }
     }
