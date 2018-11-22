@@ -34,16 +34,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.txtFlightList = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtCustomerList = new System.Windows.Forms.RichTextBox();
+            this.btnCreateBooking = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFlightID = new System.Windows.Forms.TextBox();
+            this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtViewBookingList = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -93,11 +93,11 @@
             // 
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.btnCreateBooking);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtFlightID);
+            this.tabPage1.Controls.Add(this.txtCustomerID);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
@@ -109,7 +109,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.richTextBox3);
+            this.groupBox3.Controls.Add(this.txtFlightList);
             this.groupBox3.Location = new System.Drawing.Point(325, 9);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
@@ -119,18 +119,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Flight List";
             // 
-            // richTextBox3
+            // txtFlightList
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(9, 23);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(275, 141);
-            this.richTextBox3.TabIndex = 1;
-            this.richTextBox3.Text = "";
+            this.txtFlightList.Location = new System.Drawing.Point(9, 23);
+            this.txtFlightList.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightList.Name = "txtFlightList";
+            this.txtFlightList.Size = new System.Drawing.Size(275, 141);
+            this.txtFlightList.TabIndex = 1;
+            this.txtFlightList.Text = "";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Controls.Add(this.txtCustomerList);
             this.groupBox2.Location = new System.Drawing.Point(8, 9);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -140,25 +140,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Customer List";
             // 
-            // richTextBox2
+            // txtCustomerList
             // 
-            this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(9, 25);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(275, 141);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.txtCustomerList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerList.Location = new System.Drawing.Point(9, 25);
+            this.txtCustomerList.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomerList.Name = "txtCustomerList";
+            this.txtCustomerList.Size = new System.Drawing.Size(275, 141);
+            this.txtCustomerList.TabIndex = 0;
+            this.txtCustomerList.Text = "";
             // 
-            // button2
+            // btnCreateBooking
             // 
-            this.button2.Location = new System.Drawing.Point(233, 220);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 34);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Create Booking";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCreateBooking.Location = new System.Drawing.Point(233, 220);
+            this.btnCreateBooking.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCreateBooking.Name = "btnCreateBooking";
+            this.btnCreateBooking.Size = new System.Drawing.Size(141, 34);
+            this.btnCreateBooking.TabIndex = 6;
+            this.btnCreateBooking.Text = "Create Booking";
+            this.btnCreateBooking.UseVisualStyleBackColor = true;
+            this.btnCreateBooking.Click += new System.EventHandler(this.btnCreateBooking_Click);
             // 
             // label3
             // 
@@ -182,25 +183,25 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Flight ID:";
             // 
-            // textBox2
+            // txtFlightID
             // 
-            this.textBox2.Location = new System.Drawing.Point(489, 186);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(64, 26);
-            this.textBox2.TabIndex = 1;
+            this.txtFlightID.Location = new System.Drawing.Point(489, 186);
+            this.txtFlightID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightID.Name = "txtFlightID";
+            this.txtFlightID.Size = new System.Drawing.Size(64, 26);
+            this.txtFlightID.TabIndex = 1;
             // 
-            // textBox1
+            // txtCustomerID
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 190);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(64, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtCustomerID.Location = new System.Drawing.Point(143, 190);
+            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.Size = new System.Drawing.Size(64, 26);
+            this.txtCustomerID.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.txtViewBookingList);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
@@ -210,14 +211,14 @@
             this.tabPage2.Text = "View Booking";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // txtViewBookingList
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(15, 14);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(591, 238);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.txtViewBookingList.Location = new System.Drawing.Point(15, 14);
+            this.txtViewBookingList.Margin = new System.Windows.Forms.Padding(4);
+            this.txtViewBookingList.Name = "txtViewBookingList";
+            this.txtViewBookingList.Size = new System.Drawing.Size(591, 238);
+            this.txtViewBookingList.TabIndex = 0;
+            this.txtViewBookingList.Text = "";
             // 
             // formBookingMenu
             // 
@@ -234,7 +235,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formBookingMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Booking Menu";
             this.Load += new System.EventHandler(this.formBookingMenu_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -253,16 +253,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCreateBooking;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFlightID;
+        private System.Windows.Forms.TextBox txtCustomerID;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtViewBookingList;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox txtFlightList;
+        private System.Windows.Forms.RichTextBox txtCustomerList;
     }
 }

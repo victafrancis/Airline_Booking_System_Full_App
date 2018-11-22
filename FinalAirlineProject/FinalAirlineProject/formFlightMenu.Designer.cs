@@ -33,20 +33,20 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtMaxSeats = new System.Windows.Forms.TextBox();
+            this.btnAddFlight = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFlightDest = new System.Windows.Forms.TextBox();
+            this.txtFlightOrig = new System.Windows.Forms.TextBox();
+            this.txtFlightNum = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtFlightList = new System.Windows.Forms.RichTextBox();
+            this.txtFlightID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -84,14 +84,14 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.txtMaxSeats);
+            this.tabPage1.Controls.Add(this.btnAddFlight);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtFlightDest);
+            this.tabPage1.Controls.Add(this.txtFlightOrig);
+            this.tabPage1.Controls.Add(this.txtFlightNum);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
@@ -112,23 +112,24 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Max Seats: ";
             // 
-            // textBox5
+            // txtMaxSeats
             // 
-            this.textBox5.Location = new System.Drawing.Point(221, 167);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(284, 26);
-            this.textBox5.TabIndex = 4;
+            this.txtMaxSeats.Location = new System.Drawing.Point(221, 167);
+            this.txtMaxSeats.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaxSeats.Name = "txtMaxSeats";
+            this.txtMaxSeats.Size = new System.Drawing.Size(284, 26);
+            this.txtMaxSeats.TabIndex = 4;
             // 
-            // button2
+            // btnAddFlight
             // 
-            this.button2.Location = new System.Drawing.Point(261, 219);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Add Flight";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddFlight.Location = new System.Drawing.Point(261, 219);
+            this.btnAddFlight.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddFlight.Name = "btnAddFlight";
+            this.btnAddFlight.Size = new System.Drawing.Size(100, 28);
+            this.btnAddFlight.TabIndex = 5;
+            this.btnAddFlight.Text = "Add Flight";
+            this.btnAddFlight.UseVisualStyleBackColor = true;
+            this.btnAddFlight.Click += new System.EventHandler(this.btnAddFlight_Click);
             // 
             // label4
             // 
@@ -163,36 +164,36 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Flight Number: ";
             // 
-            // textBox3
+            // txtFlightDest
             // 
-            this.textBox3.Location = new System.Drawing.Point(221, 124);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(284, 26);
-            this.textBox3.TabIndex = 3;
+            this.txtFlightDest.Location = new System.Drawing.Point(221, 124);
+            this.txtFlightDest.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightDest.Name = "txtFlightDest";
+            this.txtFlightDest.Size = new System.Drawing.Size(284, 26);
+            this.txtFlightDest.TabIndex = 3;
             // 
-            // textBox2
+            // txtFlightOrig
             // 
-            this.textBox2.Location = new System.Drawing.Point(221, 80);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(284, 26);
-            this.textBox2.TabIndex = 2;
+            this.txtFlightOrig.Location = new System.Drawing.Point(221, 80);
+            this.txtFlightOrig.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightOrig.Name = "txtFlightOrig";
+            this.txtFlightOrig.Size = new System.Drawing.Size(284, 26);
+            this.txtFlightOrig.TabIndex = 2;
             // 
-            // textBox1
+            // txtFlightNum
             // 
-            this.textBox1.Location = new System.Drawing.Point(221, 36);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 26);
-            this.textBox1.TabIndex = 1;
+            this.txtFlightNum.Location = new System.Drawing.Point(221, 36);
+            this.txtFlightNum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightNum.Name = "txtFlightNum";
+            this.txtFlightNum.Size = new System.Drawing.Size(284, 26);
+            this.txtFlightNum.TabIndex = 1;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.txtFlightID);
             this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.btnDelete);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
@@ -204,7 +205,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.txtFlightList);
             this.groupBox1.Location = new System.Drawing.Point(36, 21);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -214,22 +215,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Flight List";
             // 
-            // richTextBox1
+            // txtFlightList
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(24, 23);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(485, 127);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.txtFlightList.Location = new System.Drawing.Point(24, 23);
+            this.txtFlightList.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightList.Name = "txtFlightList";
+            this.txtFlightList.Size = new System.Drawing.Size(485, 127);
+            this.txtFlightList.TabIndex = 0;
+            this.txtFlightList.Text = "";
             // 
-            // textBox4
+            // txtFlightID
             // 
-            this.textBox4.Location = new System.Drawing.Point(231, 213);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 26);
-            this.textBox4.TabIndex = 5;
+            this.txtFlightID.Location = new System.Drawing.Point(231, 213);
+            this.txtFlightID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFlightID.Name = "txtFlightID";
+            this.txtFlightID.Size = new System.Drawing.Size(132, 26);
+            this.txtFlightID.TabIndex = 5;
             // 
             // label5
             // 
@@ -242,15 +243,16 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Flight ID:";
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.Location = new System.Drawing.Point(385, 210);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 28);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Delete Flight";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(385, 210);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(78, 28);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete Flight";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
             // 
@@ -279,7 +281,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formFlightMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Flight Menu";
+            this.Load += new System.EventHandler(this.formFlightMenu_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -296,21 +298,21 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddFlight;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFlightDest;
+        private System.Windows.Forms.TextBox txtFlightOrig;
+        private System.Windows.Forms.TextBox txtFlightNum;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.RichTextBox txtFlightList;
+        private System.Windows.Forms.TextBox txtFlightID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtMaxSeats;
     }
 }
