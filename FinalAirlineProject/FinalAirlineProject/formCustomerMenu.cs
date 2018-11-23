@@ -28,6 +28,7 @@ namespace FinalAirlineProject
         private void formCustomerMenu_Load(object sender, EventArgs e)
         {
             txtCustomerList.Text = Program.ac.customerList();
+            txtFName.Select();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -47,19 +48,18 @@ namespace FinalAirlineProject
                 if (Program.ac.addCustomer(custFName, custLName, custPhone))
                 {
                     MessageBox.Show("Successfully Added!");
+                    txtFName.Clear();
+                    txtLName.Clear();
+                    txtPhone.Clear();
+                    txtFName.Select();
                 }
                 else
                 {
                     MessageBox.Show("Customer not added...");
                 }
-                txtFName.Clear();
-                txtLName.Clear();
-                txtPhone.Clear();
-
             }
 
             txtCustomerList.Text = Program.ac.customerList();
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace FinalAirlineProject
             }
 
             txtCustomerList.Text = Program.ac.customerList();
-
+            txtCustomerID.Select();
         }
     }
 }

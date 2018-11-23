@@ -29,6 +29,7 @@ namespace FinalAirlineProject
             txtCustomerList.Text = Program.ac.customerList();
             txtFlightList.Text = Program.ac.flightList();
             txtViewBookingList.Text = Program.ac.viewBookings();
+            txtCustomerID.Select();
         }
 
         private void btnCreateBooking_Click(object sender, EventArgs e)
@@ -41,13 +42,14 @@ namespace FinalAirlineProject
                 if (Program.ac.addBooking(custID, flightNum))
                 {
                     MessageBox.Show("Booking made successfully!");
+                    txtCustomerID.Clear();
+                    txtFlightID.Clear();
+                    txtCustomerID.Select();
                 }
                 else
                 {
                     MessageBox.Show("Booking not successful...");
                 }
-                txtCustomerID.Clear();
-                txtFlightID.Clear();
             }
 
             txtViewBookingList.Text = Program.ac.viewBookings();

@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formFlightMenu));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labelError4 = new System.Windows.Forms.Label();
+            this.labelError3 = new System.Windows.Forms.Label();
+            this.labelError2 = new System.Windows.Forms.Label();
+            this.labelError1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMaxSeats = new System.Windows.Forms.TextBox();
             this.btnAddFlight = new System.Windows.Forms.Button();
@@ -41,17 +45,13 @@
             this.txtFlightOrig = new System.Windows.Forms.TextBox();
             this.txtFlightNum = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.labelError5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtFlightList = new System.Windows.Forms.RichTextBox();
             this.txtFlightID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelError1 = new System.Windows.Forms.Label();
-            this.labelError2 = new System.Windows.Forms.Label();
-            this.labelError3 = new System.Windows.Forms.Label();
-            this.labelError4 = new System.Windows.Forms.Label();
-            this.labelError5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -64,10 +64,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(24, 78);
+            this.tabControl1.Location = new System.Drawing.Point(32, 96);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(460, 256);
+            this.tabControl1.Size = new System.Drawing.Size(613, 315);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -85,36 +86,84 @@
             this.tabPage1.Controls.Add(this.txtFlightDest);
             this.tabPage1.Controls.Add(this.txtFlightOrig);
             this.tabPage1.Controls.Add(this.txtFlightNum);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(452, 227);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(605, 282);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Flight";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // labelError4
+            // 
+            this.labelError4.AutoSize = true;
+            this.labelError4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError4.ForeColor = System.Drawing.Color.Red;
+            this.labelError4.Location = new System.Drawing.Point(223, 185);
+            this.labelError4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelError4.Name = "labelError4";
+            this.labelError4.Size = new System.Drawing.Size(0, 18);
+            this.labelError4.TabIndex = 12;
+            // 
+            // labelError3
+            // 
+            this.labelError3.AutoSize = true;
+            this.labelError3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError3.ForeColor = System.Drawing.Color.Red;
+            this.labelError3.Location = new System.Drawing.Point(223, 126);
+            this.labelError3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelError3.Name = "labelError3";
+            this.labelError3.Size = new System.Drawing.Size(0, 18);
+            this.labelError3.TabIndex = 11;
+            // 
+            // labelError2
+            // 
+            this.labelError2.AutoSize = true;
+            this.labelError2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError2.ForeColor = System.Drawing.Color.Red;
+            this.labelError2.Location = new System.Drawing.Point(223, 70);
+            this.labelError2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelError2.Name = "labelError2";
+            this.labelError2.Size = new System.Drawing.Size(0, 18);
+            this.labelError2.TabIndex = 10;
+            // 
+            // labelError1
+            // 
+            this.labelError1.AutoSize = true;
+            this.labelError1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError1.ForeColor = System.Drawing.Color.Red;
+            this.labelError1.Location = new System.Drawing.Point(223, 9);
+            this.labelError1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelError1.Name = "labelError1";
+            this.labelError1.Size = new System.Drawing.Size(0, 18);
+            this.labelError1.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 165);
+            this.label6.Location = new System.Drawing.Point(77, 203);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 15);
+            this.label6.Size = new System.Drawing.Size(86, 18);
             this.label6.TabIndex = 8;
             this.label6.Text = "Max Seats: ";
             // 
             // txtMaxSeats
             // 
-            this.txtMaxSeats.Location = new System.Drawing.Point(167, 165);
+            this.txtMaxSeats.Location = new System.Drawing.Point(223, 203);
+            this.txtMaxSeats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaxSeats.Name = "txtMaxSeats";
-            this.txtMaxSeats.Size = new System.Drawing.Size(214, 23);
+            this.txtMaxSeats.Size = new System.Drawing.Size(284, 26);
             this.txtMaxSeats.TabIndex = 4;
             // 
             // btnAddFlight
             // 
-            this.btnAddFlight.Location = new System.Drawing.Point(202, 195);
+            this.btnAddFlight.Location = new System.Drawing.Point(269, 240);
+            this.btnAddFlight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddFlight.Name = "btnAddFlight";
-            this.btnAddFlight.Size = new System.Drawing.Size(80, 26);
+            this.btnAddFlight.Size = new System.Drawing.Size(107, 32);
             this.btnAddFlight.TabIndex = 5;
             this.btnAddFlight.Text = "Add Flight";
             this.btnAddFlight.UseVisualStyleBackColor = true;
@@ -124,9 +173,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 120);
+            this.label4.Location = new System.Drawing.Point(77, 148);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 15);
+            this.label4.Size = new System.Drawing.Size(121, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Flight Destination";
             // 
@@ -134,9 +184,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 73);
+            this.label3.Location = new System.Drawing.Point(77, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 15);
+            this.label3.Size = new System.Drawing.Size(94, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Flight Origin: ";
             // 
@@ -144,31 +195,35 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 24);
+            this.label2.Location = new System.Drawing.Point(77, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
+            this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Flight Number: ";
             // 
             // txtFlightDest
             // 
-            this.txtFlightDest.Location = new System.Drawing.Point(167, 120);
+            this.txtFlightDest.Location = new System.Drawing.Point(223, 148);
+            this.txtFlightDest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFlightDest.Name = "txtFlightDest";
-            this.txtFlightDest.Size = new System.Drawing.Size(214, 23);
+            this.txtFlightDest.Size = new System.Drawing.Size(284, 26);
             this.txtFlightDest.TabIndex = 3;
             // 
             // txtFlightOrig
             // 
-            this.txtFlightOrig.Location = new System.Drawing.Point(167, 73);
+            this.txtFlightOrig.Location = new System.Drawing.Point(223, 90);
+            this.txtFlightOrig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFlightOrig.Name = "txtFlightOrig";
-            this.txtFlightOrig.Size = new System.Drawing.Size(214, 23);
+            this.txtFlightOrig.Size = new System.Drawing.Size(284, 26);
             this.txtFlightOrig.TabIndex = 2;
             // 
             // txtFlightNum
             // 
-            this.txtFlightNum.Location = new System.Drawing.Point(167, 24);
+            this.txtFlightNum.Location = new System.Drawing.Point(223, 30);
+            this.txtFlightNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFlightNum.Name = "txtFlightNum";
-            this.txtFlightNum.Size = new System.Drawing.Size(214, 23);
+            this.txtFlightNum.Size = new System.Drawing.Size(284, 26);
             this.txtFlightNum.TabIndex = 1;
             // 
             // tabPage2
@@ -178,55 +233,74 @@
             this.tabPage2.Controls.Add(this.txtFlightID);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.btnDelete);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(452, 227);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(605, 282);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "View/Delete Flight";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // labelError5
+            // 
+            this.labelError5.AutoSize = true;
+            this.labelError5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError5.ForeColor = System.Drawing.Color.Red;
+            this.labelError5.Location = new System.Drawing.Point(205, 197);
+            this.labelError5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelError5.Name = "labelError5";
+            this.labelError5.Size = new System.Drawing.Size(0, 18);
+            this.labelError5.TabIndex = 13;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtFlightList);
-            this.groupBox1.Location = new System.Drawing.Point(27, 17);
+            this.groupBox1.Location = new System.Drawing.Point(36, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 138);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(536, 170);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Flight List";
             // 
             // txtFlightList
             // 
-            this.txtFlightList.Location = new System.Drawing.Point(18, 19);
+            this.txtFlightList.Location = new System.Drawing.Point(24, 23);
+            this.txtFlightList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFlightList.Name = "txtFlightList";
             this.txtFlightList.ReadOnly = true;
-            this.txtFlightList.Size = new System.Drawing.Size(365, 104);
+            this.txtFlightList.Size = new System.Drawing.Size(485, 127);
             this.txtFlightList.TabIndex = 0;
             this.txtFlightList.Text = "";
             // 
             // txtFlightID
             // 
-            this.txtFlightID.Location = new System.Drawing.Point(150, 180);
+            this.txtFlightID.Location = new System.Drawing.Point(200, 222);
+            this.txtFlightID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFlightID.Name = "txtFlightID";
-            this.txtFlightID.Size = new System.Drawing.Size(123, 23);
+            this.txtFlightID.Size = new System.Drawing.Size(163, 26);
             this.txtFlightID.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(89, 181);
+            this.label5.Location = new System.Drawing.Point(119, 223);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
+            this.label5.Size = new System.Drawing.Size(65, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Flight ID:";
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(294, 180);
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDelete.Location = new System.Drawing.Point(392, 222);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(58, 23);
+            this.btnDelete.Size = new System.Drawing.Size(77, 28);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete Flight";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -236,61 +310,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 25);
+            this.label1.Location = new System.Drawing.Point(223, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 34);
+            this.label1.Size = new System.Drawing.Size(260, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "Flight Menu";
-            // 
-            // labelError1
-            // 
-            this.labelError1.AutoSize = true;
-            this.labelError1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError1.ForeColor = System.Drawing.Color.Red;
-            this.labelError1.Location = new System.Drawing.Point(167, 7);
-            this.labelError1.Name = "labelError1";
-            this.labelError1.Size = new System.Drawing.Size(0, 15);
-            this.labelError1.TabIndex = 9;
-            // 
-            // labelError2
-            // 
-            this.labelError2.AutoSize = true;
-            this.labelError2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError2.ForeColor = System.Drawing.Color.Red;
-            this.labelError2.Location = new System.Drawing.Point(167, 57);
-            this.labelError2.Name = "labelError2";
-            this.labelError2.Size = new System.Drawing.Size(0, 15);
-            this.labelError2.TabIndex = 10;
-            // 
-            // labelError3
-            // 
-            this.labelError3.AutoSize = true;
-            this.labelError3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError3.ForeColor = System.Drawing.Color.Red;
-            this.labelError3.Location = new System.Drawing.Point(167, 102);
-            this.labelError3.Name = "labelError3";
-            this.labelError3.Size = new System.Drawing.Size(0, 15);
-            this.labelError3.TabIndex = 11;
-            // 
-            // labelError4
-            // 
-            this.labelError4.AutoSize = true;
-            this.labelError4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError4.ForeColor = System.Drawing.Color.Red;
-            this.labelError4.Location = new System.Drawing.Point(167, 150);
-            this.labelError4.Name = "labelError4";
-            this.labelError4.Size = new System.Drawing.Size(0, 15);
-            this.labelError4.TabIndex = 12;
-            // 
-            // labelError5
-            // 
-            this.labelError5.AutoSize = true;
-            this.labelError5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError5.ForeColor = System.Drawing.Color.Red;
-            this.labelError5.Location = new System.Drawing.Point(154, 160);
-            this.labelError5.Name = "labelError5";
-            this.labelError5.Size = new System.Drawing.Size(0, 15);
-            this.labelError5.TabIndex = 13;
             // 
             // button1
             // 
@@ -299,9 +324,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(482, -2);
+            this.button1.Location = new System.Drawing.Point(643, -2);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 32);
+            this.button1.Size = new System.Drawing.Size(40, 39);
             this.button1.TabIndex = 8;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -309,16 +335,19 @@
             // 
             // formFlightMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnAddFlight;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(512, 346);
+            this.CancelButton = this.button1;
+            this.ClientSize = new System.Drawing.Size(683, 426);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formFlightMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.formFlightMenu_Load_1);

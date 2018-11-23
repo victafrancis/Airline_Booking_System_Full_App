@@ -42,12 +42,12 @@ namespace FinalAirlineProject
                     txtFlightOrig.Clear();
                     txtFlightDest.Clear();
                     txtMaxSeats.Clear();
+                    txtFlightNum.Select();
                 }
                 else
                 {
                     MessageBox.Show("Flight not added...");
                 }
-
             }
 
             txtFlightList.Text = Program.ac.flightList();
@@ -69,12 +69,14 @@ namespace FinalAirlineProject
                 }
                 txtFlightID.Clear();
                 txtFlightList.Text = Program.ac.flightList();
+                txtFlightID.Select();
             }
         }
 
         private void formFlightMenu_Load_1(object sender, EventArgs e)
         {
             txtFlightList.Text = Program.ac.flightList();
+            txtFlightNum.Select();
         }
 
         private void button1_Click(object sender, EventArgs e)

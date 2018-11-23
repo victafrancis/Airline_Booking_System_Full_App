@@ -23,6 +23,7 @@ namespace FinalAirlineProject
             Application.Run(new formMenu());
         }
 
+        //function to validate integer input.
         public static int ValidateInt(string s, Label label)
         {
             int num;
@@ -33,11 +34,12 @@ namespace FinalAirlineProject
                 return num;
             }
 
-            label.Text = "Please input a valid value!";
+            label.Text = "Input must be a valid number!";
 
             return -1;
         }
 
+        //function to validate string input. Checks for empty textboxes
         public static string ValidateString(string s, Label label)
         {
             if (!string.IsNullOrWhiteSpace(s))
@@ -46,7 +48,7 @@ namespace FinalAirlineProject
                 return s;
             }
 
-            label.Text = "Please input a valid value!";
+            label.Text = "This field is required!";
             return null;
         }
     }
