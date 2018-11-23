@@ -45,5 +45,65 @@ namespace FinalAirlineProject
         {
 
         }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            lblInfo.Text = "Opens menu to manage customers";
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            lblInfo.Text = "";
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            lblInfo.Text = "Opens menu to manage flights";
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            lblInfo.Text = "";
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            lblInfo.Text = "Opens menu to manage bookings";
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            lblInfo.Text = "";
+        }
+
+        private void button1_Enter(object sender, EventArgs e)
+        {
+            lblInfo.Text = "Opens menu to manage customers";
+        }
+
+        private void button1_Leave(object sender, EventArgs e)
+        {
+            lblInfo.Text = "";
+        }
+
+        private void button2_Enter(object sender, EventArgs e)
+        {
+            lblInfo.Text = "Opens menu to manage flights";
+        }
+
+        private void button2_Leave(object sender, EventArgs e)
+        {
+            lblInfo.Text = "";
+        }
+
+        private void button3_Enter(object sender, EventArgs e)
+        {
+            lblInfo.Text = "Opens menu to manage bookings";
+        }
+
+        private void button3_Leave(object sender, EventArgs e)
+        {
+            lblInfo.Text = "";
+        }
     }
 }
