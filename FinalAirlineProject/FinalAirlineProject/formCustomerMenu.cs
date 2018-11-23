@@ -13,10 +13,12 @@ namespace FinalAirlineProject
     public partial class formCustomerMenu : Form
     {
         formMenu menu;
+
         public formCustomerMenu()
         {
             InitializeComponent();
         }
+
         public formCustomerMenu(formMenu menu)
         {
             this.menu = menu;
@@ -36,39 +38,50 @@ namespace FinalAirlineProject
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string custFName = txtFName.Text;
-            string custLName = txtLName.Text;
-            string custPhone = txtPhone.Text;
+            string custFName = Program.ValidateString(txtFName.Text, labelError1);
+            string custLName = Program.ValidateString(txtLName.Text, labelError2);
+            string custPhone = Program.ValidateString(txtPhone.Text, labelError3);
 
-            if (Program.ac.addCustomer(custFName, custLName, custPhone))
-                MessageBox.Show("Successfully Added!");
-            else
-                MessageBox.Show("Customer not added...");
+            if(custFName != null && custLName != null && custPhone != null)
+            {
+                if (Program.ac.addCustomer(custFName, custLName, custPhone))
+                {
+                    MessageBox.Show("Successfully Added!");
+                }
+                else
+                {
+                    MessageBox.Show("Customer not added...");
+                }
+                txtFName.Clear();
+                txtLName.Clear();
+                txtPhone.Clear();
 
-            txtFName.Clear();
-            txtLName.Clear();
-            txtPhone.Clear();
+            }
 
             txtCustomerList.Text = Program.ac.customerList();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtCustomerID.Text);
-            if (Program.ac.deleteCustomer(id))
-            {
-                MessageBox.Show("Successfully Deleted!");
-            }
-            else
-            {
-                MessageBox.Show("Customer not deleted...");
-            }
 
+            int id = Program.ValidateInt(txtCustomerID.Text, labelError4);
             
-
-            txtCustomerID.Clear();
+            if(id != -1)
+            {
+                if (Program.ac.deleteCustomer(id))
+                {
+                    MessageBox.Show("Successfully Deleted!");
+                }
+                else
+                {
+                    MessageBox.Show("Customer not deleted...");
+                }
+                txtCustomerID.Clear();
+            }
 
             txtCustomerList.Text = Program.ac.customerList();
+
         }
     }
 }
