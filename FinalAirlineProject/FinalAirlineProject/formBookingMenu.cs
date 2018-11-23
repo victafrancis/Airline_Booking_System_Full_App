@@ -31,25 +31,32 @@ namespace FinalAirlineProject
             txtViewBookingList.Text = Program.ac.viewBookings();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnCreateBooking_Click(object sender, EventArgs e)
+        {
+            int custID = Program.ValidateInt(txtCustomerID.Text, labelError1);
+            int flightNum = Program.ValidateInt(txtFlightID.Text, labelError2);
+
+            if(custID != -1 && flightNum != -1)
+            {
+                if (Program.ac.addBooking(custID, flightNum))
+                {
+                    MessageBox.Show("Booking made successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Booking not successful...");
+                }
+                txtCustomerID.Clear();
+                txtFlightID.Clear();
+            }
+
+            txtViewBookingList.Text = Program.ac.viewBookings();
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             menu.Show();
             Close();
-        }
-
-        private void btnCreateBooking_Click(object sender, EventArgs e)
-        {
-            int custID = Convert.ToInt32(txtCustomerID);
-            int flightNum = Convert.ToInt32(txtFlightID);
-            if (Program.ac.addBooking(custID, flightNum))
-                MessageBox.Show("Booking made successfully!");
-            else
-                MessageBox.Show("Booking not successful...");
-
-            txtCustomerID.Clear();
-            txtFlightID.Clear();
-
-            txtViewBookingList.Text = Program.ac.viewBookings();
         }
     }
 }

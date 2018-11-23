@@ -22,5 +22,32 @@ namespace FinalAirlineProject
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new formMenu());
         }
+
+        public static int ValidateInt(string s, Label label)
+        {
+            int num;
+
+            if (int.TryParse(s, out num))
+            {
+                label.Text = "";
+                return num;
+            }
+
+            label.Text = "Please input a valid value!";
+
+            return -1;
+        }
+
+        public static string ValidateString(string s, Label label)
+        {
+            if (!string.IsNullOrWhiteSpace(s))
+            {
+                label.Text = "";
+                return s;
+            }
+
+            label.Text = "Please input a valid value!";
+            return null;
+        }
     }
 }
