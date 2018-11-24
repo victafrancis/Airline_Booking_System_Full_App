@@ -21,7 +21,7 @@ namespace FinalAirlineProject
 
         public bool addFlight(int flightNo, string origin, string destination, int maxSeats)
         {
-            if (numFlights >= maxFlights) return false;
+            if (numFlights >= maxFlights || flightNo < 0 || maxSeats < 0) return false;
             listFlights[numFlights] = new Flight(flightNo, origin, destination, maxSeats);
             numFlights++;
             return true;
